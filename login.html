@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - App Dimostrativa</title>
+  <title>Login - App Modern</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main>
-    <div id="login-container">
+  <main class="auth-main">
+    <div id="login-container" class="auth-container fade-in">
       <h2>Login</h2>
-      <!-- Metodo POST e autocomplete off per non mostrare i dati nell'URL -->
+      <!-- Metodo POST e autocomplete off per sicurezza -->
       <form id="login-form" method="POST" autocomplete="off">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required autocomplete="off">
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required autocomplete="off">
-        
-        <button type="submit">Accedi</button>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required autocomplete="off">
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required autocomplete="off">
+        </div>
+        <button type="submit" class="btn">Accedi</button>
       </form>
       <p id="login-message"></p>
       <p>Non hai un account? <a href="register.html">Registrati</a></p>
